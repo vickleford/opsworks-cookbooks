@@ -1,0 +1,4 @@
+name              'doggoned-cookbook'
+description       'just a doggoned cookbook'
+long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version           '0.1'
