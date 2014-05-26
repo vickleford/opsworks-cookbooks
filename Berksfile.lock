@@ -1,0 +1,12 @@
+{
+  "sources": {
+    "external-cookbook": {
+      "locked_version": "0.1.0",
+      "git": "https://github.com/vickleford/external-cookbook.git",
+      "ref": "88d6f2635787bddef9ba11d1481681113edd6673"
+    },
+    "mysql": {
+      "locked_version": "5.2.12"
+    }
+  }
+}
