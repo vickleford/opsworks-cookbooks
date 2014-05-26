@@ -1,1 +1,1 @@
-default['mysql]']['port'] = 3306
+default['mysql]']['port'] = '3306'
