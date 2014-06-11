@@ -5,8 +5,25 @@
       "git": "https://github.com/vickleford/external-cookbook.git",
       "ref": "88d6f2635787bddef9ba11d1481681113edd6673"
     },
+    "apt": {
+      "locked_version": "2.4.0"
+    },
     "mysql": {
       "locked_version": "5.2.12"
+    },
+    "chef-solo-search": {
+      "locked_version": "0.5.1",
+      "git": "https://github.com/edelight/chef-solo-search.git",
+      "ref": "848fad1461c78fd502975f1df2e14eed12610635"
+    },
+    "custom_database": {
+      "path": "./custom_database"
+    },
+    "doggoned-cookbook": {
+      "path": "./doggoned-cookbook"
+    },
+    "custom_webapp": {
+      "path": "./custom_webapp"
     }
   }
 }

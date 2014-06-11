@@ -5,11 +5,6 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  # All Vagrant configuration is done here. The most common configuration
-  # options are documented and commented below. For a complete reference,
-  # please see the online documentation at vagrantup.com.
-
-  # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "ci-ubuntu-12.04"
 
   config.vm.define "web" do |web|
@@ -25,8 +20,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     db.vm.network :private_network, ip: "192.168.35.10"
 
     db.vm.provision :chef_solo do |chef|
-      # chef.cookbooks_path = "./"
-      chef.run_list = ["custom_database::setup"]
+      chef.cookbooks_path = "./"
+      chef.data_bags_path = "custom_database/data_bags"
+      chef.json = {
+        "mysql" => {
+          "server_root_password" => "ohmygodzilla"
+        }
+      }
+      chef.run_list = ["chef-solo-search", "apt", "custom_database::setup"]
     end
   end
 

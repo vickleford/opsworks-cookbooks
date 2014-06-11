@@ -1,0 +1,19 @@
+{
+  "id": "webhead",
+  "name": "webhead",
+  "chef_environment": "_default",
+  "json_class": "Chef::Node",
+  "normal": {
+    "ipaddress": "192.168.34.10",
+    "cluster_name": "custom_application"
+  },
+  "chef_type": "node",
+  "default": {
+  },
+  "override": {
+  },
+  "run_list": [
+    "recipe[custom_webapp::setup]"
+  ]
+}
+
